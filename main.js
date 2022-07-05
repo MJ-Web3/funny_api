@@ -19,10 +19,6 @@ fetch(api)
     })
         btn.addEventListener('click',()=>{
             for(i=0;i<apiData.data.memes.length;i++){
-                let newElement = document.createElement('option');
-                newElement.setAttribute('value',apiData.data.memes[i].name);
-                newElement.text = apiData.data.memes[i].name;
-                selection.appendChild(newElement);
                 if(selection.value == apiData.data.memes[i].name){
                     theImg.setAttribute('src',apiData.data.memes[i].url.replace('\\',''));
                     // console.log(apiData.data.memes[i].url.replace('\\',''));
